@@ -27,7 +27,7 @@ supervisor_programs: []
 #     stopasgroup=true
 
 supervisor_nodaemon: false
-
+supervisor_venv_activate: false
 supervisor_log_dir: /var/log/supervisor
 
 supervisor_user: root
