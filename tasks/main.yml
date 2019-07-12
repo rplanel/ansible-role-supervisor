@@ -2,6 +2,12 @@
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
 
+- name: Install supervisor in virtualenv
+  pip: 
+    name: supervisor
+    virtualenv: "{{ supervisor_venv_path }}"
+  when: supervisor_venv_activate
+
 - name: Ensure Supervisor is installed (specific version).
   pip:
     name: supervisor
